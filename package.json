@@ -1,6 +1,6 @@
 {
-  "name": "pptxgenjs",
-  "version": "3.2.0-beta",
+  "name": "@unchartedsoftware-cmp/pptxgenjs",
+  "version": "3.2.2-beta",
   "author": {
     "name": "Brent Ely",
     "url": "https://github.com/gitbrent/"
@@ -50,9 +50,12 @@
     "rollup-plugin-typescript2": "^0.26.0",
     "typescript": "3.3.1"
   },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gitbrent/PptxGenJS.git"
+    "url": "git+https://github.com/unchartedsoftware-cmp/PptxGenJS.git"
   },
   "keywords": [
     "javascript-create-powerpoint",

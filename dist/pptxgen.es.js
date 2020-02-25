@@ -1,4 +1,4 @@
-/* PptxGenJS 3.2.0-beta @ 2020-02-13T05:17:34.692Z */
+/* PptxGenJS 3.2.2-beta @ 2020-02-24T20:17:33.626Z */
 import * as JSZip from 'jszip';
 
 /**
@@ -5856,7 +5856,7 @@ function createSvgPngPreview(rel) {
 |*|  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 |*|  SOFTWARE.
 \*/
-var VERSION = '3.2.0-beta-20200212';
+var VERSION = '3.2.2-beta-20200224';
 var PptxGenJS = /** @class */ (function () {
     function PptxGenJS() {
         var _this = this;
@@ -5981,7 +5981,7 @@ var PptxGenJS = /** @class */ (function () {
         /**
          * Create and export the .pptx file
          * @param {WRITE_OUTPUT_TYPE} outputType - output file type
-         * @return {Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array>} Promise with data or stream (node) or filename (browser)
+         * @return {Promise<string | ArrayBuffer | Blob | Uint8Array>} Promise with data or stream (node) or filename (browser)
          */
         this.exportPresentation = function (outputType) {
             return new Promise(function (resolve, reject) {
@@ -6318,7 +6318,7 @@ var PptxGenJS = /** @class */ (function () {
     // EXPORT METHODS
     /**
      * Export the current Presenation to stream
-     * @returns {Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array>} file stream
+     * @returns {Promise<string | ArrayBuffer | Blob | Uint8Array>} file stream
      */
     PptxGenJS.prototype.stream = function () {
         var _this = this;
@@ -6335,7 +6335,7 @@ var PptxGenJS = /** @class */ (function () {
     /**
      * Export the current Presenation as JSZip content with the selected type
      * @param {JSZIP_OUTPUT_TYPE} outputType - 'arraybuffer' | 'base64' | 'binarystring' | 'blob' | 'nodebuffer' | 'uint8array'
-     * @returns {Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array>} file content in selected type
+     * @returns {Promise<string | ArrayBuffer | Blob | Uint8Array>} file content in selected type
      */
     PptxGenJS.prototype.write = function (outputType) {
         var _this = this;

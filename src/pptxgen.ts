@@ -81,7 +81,7 @@ import * as genMedia from './gen-media'
 import * as genTable from './gen-tables'
 import * as genXml from './gen-xml'
 
-const VERSION = '3.2.0-beta-20200212'
+const VERSION = '3.2.2-beta-20200224'
 
 export default class PptxGenJS implements IPresentationLib {
 	// Property getters/setters
@@ -433,9 +433,9 @@ export default class PptxGenJS implements IPresentationLib {
 	/**
 	 * Create and export the .pptx file
 	 * @param {WRITE_OUTPUT_TYPE} outputType - output file type
-	 * @return {Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array>} Promise with data or stream (node) or filename (browser)
+	 * @return {Promise<string | ArrayBuffer | Blob | Uint8Array>} Promise with data or stream (node) or filename (browser)
 	 */
-	private exportPresentation = (outputType?: WRITE_OUTPUT_TYPE): Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array> =>
+	private exportPresentation = (outputType?: WRITE_OUTPUT_TYPE): Promise<string | ArrayBuffer | Blob | Uint8Array> =>
 		new Promise((resolve, reject) => {
 			let arrChartPromises: Promise<string>[] = []
 			let arrMediaPromises: Promise<string>[] = []
@@ -540,9 +540,9 @@ export default class PptxGenJS implements IPresentationLib {
 
 	/**
 	 * Export the current Presenation to stream
-	 * @returns {Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array>} file stream
+	 * @returns {Promise<string | ArrayBuffer | Blob | Uint8Array>} file stream
 	 */
-	stream(): Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array> {
+	stream(): Promise<string | ArrayBuffer | Blob | Uint8Array> {
 		return new Promise((resolve, reject) => {
 			this.exportPresentation('STREAM')
 				.then(content => {
@@ -557,9 +557,9 @@ export default class PptxGenJS implements IPresentationLib {
 	/**
 	 * Export the current Presenation as JSZip content with the selected type
 	 * @param {JSZIP_OUTPUT_TYPE} outputType - 'arraybuffer' | 'base64' | 'binarystring' | 'blob' | 'nodebuffer' | 'uint8array'
-	 * @returns {Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array>} file content in selected type
+	 * @returns {Promise<string | ArrayBuffer | Blob | Uint8Array>} file content in selected type
 	 */
-	write(outputType: JSZIP_OUTPUT_TYPE): Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array> {
+	write(outputType: JSZIP_OUTPUT_TYPE): Promise<string | ArrayBuffer | Blob | Uint8Array> {
 		return new Promise((resolve, reject) => {
 			this.exportPresentation(outputType)
 				.then(content => {

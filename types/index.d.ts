@@ -62,15 +62,15 @@ declare class PptxGenJS {
 
 	/**
 	 * Export the current Presenation to stream
-	 * @returns {Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array>} file stream
+	 * @returns {Promise<string | ArrayBuffer | Blob | Uint8Array>} file stream
 	 */
-	stream(): Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array>
+	stream(): Promise<string | ArrayBuffer | Blob | Uint8Array>
 	/**
 	 * Export the current Presenation as JSZip content with the selected type
 	 * @param {JSZIP_OUTPUT_TYPE} outputType - 'arraybuffer' | 'base64' | 'binarystring' | 'blob' | 'nodebuffer' | 'uint8array'
-	 * @returns {Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array>} file content in selected type
+	 * @returns {Promise<string | ArrayBuffer | Blob | Uint8Array>} file content in selected type
 	 */
-	write(outputType: PptxGenJS.JSZIP_OUTPUT_TYPE): Promise<string | ArrayBuffer | Blob | Buffer | Uint8Array>
+	write(outputType: PptxGenJS.JSZIP_OUTPUT_TYPE): Promise<string | ArrayBuffer | Blob | Uint8Array>
 	/**
 	 * Export the current Presenation. Writes file to local file system if `fs` exists, otherwise, initiates download in browsers
 	 * @param {string} exportName - file name
